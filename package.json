@@ -22,10 +22,11 @@
   "dependencies": {
     "@hashgraph/sdk": "^2.30.0",
     "@hashgraphonline/standards-agent-kit": "latest",
-    "@langchain/core": "^0.1.12",
-    "@langchain/langgraph": "^0.0.5",
+    "@langchain/core": "^0.3.45",
+    "@langchain/langgraph": "^0.2.64",
     "@langchain/openai": "^0.0.14",
     "dotenv": "^16.3.1",
-    "langchain": "^0.1.12"
+    "langchain": "^0.1.12",
+    "openai": "^4.95.1"
   }
 }
