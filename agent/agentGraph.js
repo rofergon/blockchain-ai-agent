@@ -19,7 +19,7 @@ export async function createAgentGraph(llm, hederaClient) {
   const tools = [...hederaTools, ...weatherTools];
   
   // Create a ToolNode that encapsulates all tools
-  const toolsNode = new ToolNode(tools);
+  const toolsNode = new ToolNode({ tools });
   
   // Create the system prompt
   const systemPrompt = `You are a helpful assistant that can perform actions using tools and answer questions.
