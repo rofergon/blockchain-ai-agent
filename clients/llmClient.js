@@ -5,13 +5,19 @@ import { ChatOpenAI } from '@langchain/openai';
  * @returns {ChatOpenAI} The configured LLM client
  */
 export async function createLLMClient() {
-  // Using OpenRouter as the host and selecting an OpenAI model
-  // This approach allows for swapping models with minimal code changes
-  const llm = new ChatOpenAI({
-    baseURL: "https://openrouter.ai/api/v1",
-    apiKey: process.env.OPENROUTER_API_KEY,
-    modelName: "openai/gpt-4-turbo", // Can be easily changed to other models
-  });
-  
-  return llm;
+  try {
+    // Ahora que las variables de entorno funcionan, podemos usar ChatOpenAI
+    // Establecer explícitamente OPENAI_API_KEY
+    process.env.OPENAI_API_KEY = process.env.OPENROUTER_API_KEY;
+    
+    const llm = new ChatOpenAI({
+      modelName: "gpt-3.5-turbo",
+      temperature: 0.7,
+    });
+    
+    return llm;
+  } catch (error) {
+    console.error("Error creating LLM client:", error);
+    throw error;
+  }
 } 
