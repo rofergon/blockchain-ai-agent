@@ -1,0 +1,31 @@
+{
+  "name": "blockchain-ai-agent",
+  "version": "1.0.0",
+  "description": "AI agent that interacts with blockchain and web2 APIs using Hedera Agent Kit",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blockchain",
+    "ai",
+    "agent",
+    "hedera",
+    "langchain",
+    "langgraph",
+    "hedera-agent-kit"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hashgraph/sdk": "^2.30.0",
+    "@hashgraphonline/standards-agent-kit": "latest",
+    "@langchain/core": "^0.1.12",
+    "@langchain/langgraph": "^0.0.5",
+    "@langchain/openai": "^0.0.14",
+    "dotenv": "^16.3.1",
+    "langchain": "^0.1.12"
+  }
+}
